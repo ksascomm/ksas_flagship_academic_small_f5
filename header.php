@@ -38,7 +38,7 @@
 <?php $theme_option = flagship_sub_get_global_options(); $color_scheme = $theme_option['flagship_sub_color_scheme']; global $blog_id; $site_id = 'site-' . $blog_id; ?>
 <body <?php body_class($color_scheme . ' ' . $site_id); ?>>	
 	<header>
-		<div class="row show-for-medium">
+		<div class="row hide-for-large-up">
 			<div class="small-12 large-4 columns centered blue_bg">
 			<div class="mobile-logo centered"><a href="<?php echo network_site_url(); ?>">Home</a></div>
 			<h2 class="white" align="center"><?php echo get_bloginfo( 'title' ); ?></h2>
@@ -65,21 +65,21 @@
 							'fallback_cb' => 'foundation_page_menu', 
 							'container' => 'div',
 							'container_id' => 'search_links', 
-							'container_class' => 'small-6 columns links inline hide-for-mobile',
+							'container_class' => 'small-6 columns links inline hide-for-small-only',
 							'depth' => 1,
 							'items_wrap' => '%3$s', )); ?> 
 				</div>	
 			</div>	<!-- End #search-bar	 -->
 		</div>
-		<div class="row hide-for-medium">
-			<div class="medium-12 columns hide-for-small" id="logo_nav">
+		<div class="row hide-for-medium-up">
+			<div class="medium-12 columns hide-for-small-only" id="logo_nav">
 				<li class="logo"><a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences">Krieger School of Arts & Sciences</a></li>
 				
 				<a href="<?php echo site_url(); ?>"><h1 class="white"><span class="small"><?php echo get_bloginfo ( 'description' ); ?></span>					<?php echo get_bloginfo( 'title' ); ?></h1></a>
 			
 			</div>
 		</div>
-		<div class="row hide-for-medium hide-for-print">
+		<div class="row hide-for-medium-up hide-for-print">
 			<?php wp_nav_menu( array( 
 				'theme_location' => 'main_nav', 
 				'menu_class' => 'nav-bar', 
