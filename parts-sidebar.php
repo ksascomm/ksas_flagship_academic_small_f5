@@ -63,8 +63,11 @@
 			<?php
 			if ( is_front_page() ) {    
 				dynamic_sidebar( 'homepage-sb' );
+
+			} elseif ( is_home() ) {    
+				dynamic_sidebar( 'archive-sb' );
 							
-			}  elseif ( is_page( 'graduate' ) || $ancestor_slug == 'graduate' ) {    
+			} elseif ( is_page( 'graduate' ) || $ancestor_slug == 'graduate' ) {    
 				dynamic_sidebar( 'graduate-sb' );
 			
 			} elseif ( is_page( 'research' ) || $ancestor_slug == 'research' ) {    
@@ -72,6 +75,7 @@
 			
 			} elseif ( is_page( 'undergraduate' ) || $ancestor_slug == 'undergraduate' ) {    
 				dynamic_sidebar( 'undergrad-sb' ); 
+			
 			
 			} else { 
 				dynamic_sidebar( 'page-sb' );
