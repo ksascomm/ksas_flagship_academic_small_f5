@@ -7,6 +7,7 @@ Version: 		2.0
 Template: ksas_flagship_academic_f5
 */
 
+
 .textwidget {margin: 0;}
 .grey {color: #ccc;}
 #page {
@@ -21,6 +22,10 @@ Template: ksas_flagship_academic_f5
 #main_nav ul li ul li {padding:0;}
 .nav-bar > li.has-flyout > a:first-child {
 	padding-right: 0;
+}
+
+a.button {
+  color: white!important;
 }
 
 .nav-bar > li { float: left; display: block; position: relative; padding: 0; margin: 0;  line-height: 72px;  }
