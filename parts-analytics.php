@@ -13,3 +13,49 @@
   ga('globalKSAS.send', 'pageview');
 
 </script>
+
+<script type="text/javascript">
+function viewport() {
+  var myWidth = 0, myHeight = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+  //Non-IE
+  myWidth = window.innerWidth;
+  myHeight = window.innerHeight;
+  } else if( document.documentElement &&
+ ( document.documentElement.clientWidth
+ || document.documentElement.clientHeight ) ) {
+  //IE 6+ in 'standards compliant mode'
+  myWidth = document.documentElement.clientWidth;
+  myHeight = document.documentElement.clientHeight;
+  } else if( document.body &&
+ ( document.body.clientWidth
+ || document.body.clientHeight ) ) {
+  //IE 4 compatible
+  myWidth = document.body.clientWidth;
+  myHeight = document.body.clientHeight;
+  }
+/* To Track Width x Height, leave this section uncommented */
+  ga('send',
+   'event',
+   'Viewport',
+   'Size',
+   myWidth+'x'+myHeight,
+   {'nonInteraction': 1});
+/* To Track Width only, uncomment only this section
+  ga('send',
+   'event',
+   'Viewport',
+   'Width',
+   ""+myWidth+"",
+   {'nonInteraction': 1});
+*/
+/* To Tack Height only, uncomment only this section
+  ga('send',
+   'event',
+   'Viewport',
+   'Height',
+   ""+myHeight+"",
+   {'nonInteraction': 1});
+*/
+}
+</script>
