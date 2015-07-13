@@ -38,37 +38,37 @@
 <body <?php body_class($color_scheme . ' ' . $site_id); ?> onLoad="viewport()">	
 	<header>
 	   <div id="mobile-nav">
-		<div class="row">
-			<div class="small-12 large-4 columns centered blue_bg">
-			<div class="mobile-logo centered"><a href="<?php echo network_site_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo.png" alt="jhu logo"></a></div>
-			<h2 align="center"><a class="white" href="<?php echo site_url(); ?>"><?php echo get_bloginfo( 'title' ); ?></a></h2>
+			<div class="row">
+				<div class="small-12 large-4 columns centered blue_bg">
+				<div class="mobile-logo centered"><a href="<?php echo network_site_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo-horizontal.png" alt="jhu logo"></a></div>
+				<h2 align="center"><a class="white" href="<?php echo site_url(); ?>"><?php echo get_bloginfo( 'title' ); ?></a></h2>
+				</div>
 			</div>
-		</div>
-		<div class="row hide-for-print">
-				<div id="search-bar" class="small-12 columns">
-					
-						<div class="small-6 columns">
-						<?php $theme_option = flagship_sub_get_global_options();
-								$collection_name = $theme_option['flagship_sub_search_collection'];
-						?>
+			<div class="row hide-for-print">
+					<div id="search-bar" class="small-12 columns">
+						
+							<div class="small-6 columns">
+							<?php $theme_option = flagship_sub_get_global_options();
+									$collection_name = $theme_option['flagship_sub_search_collection'];
+							?>
 
-						<form method="GET" action="<?php echo site_url('/search'); ?>">
-							<input type="submit" class="icon-search" value="&#xe004;" />
-							<input type="text" name="q" placeholder="Search this site" />
-							<input type="hidden" name="site" value="<?php echo $collection_name; ?>" />
-						</form>
-						</div>
-							<?php wp_nav_menu( array(
-								'theme_location' => 'search_bar',
-								'menu_class' => '',
-								'fallback_cb' => 'foundation_page_menu',
-								'container' => 'div',
-								'container_id' => 'search_links',
-								'container_class' => 'small-6 columns links inline',
-								'depth' => 1,
-								'items_wrap' => '%3$s', )); ?>
-					
-				</div>	<!-- End #search-bar	 -->
+							<form method="GET" action="<?php echo site_url('/search'); ?>">
+								<input type="submit" class="icon-search" value="&#xe004;" />
+								<input type="text" name="q" placeholder="Search this site" />
+								<input type="hidden" name="site" value="<?php echo $collection_name; ?>" />
+							</form>
+							</div>
+								<?php wp_nav_menu( array(
+									'theme_location' => 'search_bar',
+									'menu_class' => '',
+									'fallback_cb' => 'foundation_page_menu',
+									'container' => 'div',
+									'container_id' => 'search_links',
+									'container_class' => 'small-6 columns links inline',
+									'depth' => 1,
+									'items_wrap' => '%3$s', )); ?>
+						
+					</div>	<!-- End #search-bar	 -->
 			</div>
 		</div>
 		
