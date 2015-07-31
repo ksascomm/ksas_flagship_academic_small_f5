@@ -136,3 +136,15 @@ border-style: solid !important;
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 .nav-bar > li.has-flyout.is-touch > a:first-child { padding-right: 25px; }	
 }
+
+/*IE9 Queries*/
+@media (min-width: 1023px) {
+    #mobile-nav {
+    display: none !important;
+  }
+}
+@media (max-width: 1023px) {
+    #desktop-nav {
+    display: none;
+  }
+}
