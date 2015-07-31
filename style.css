@@ -132,3 +132,7 @@ border-color: rgb(204, 204, 204) !important;
 border-width: 1px !important;
 border-style: solid !important;
 }
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+.nav-bar > li.has-flyout.is-touch > a:first-child { padding-right: 25px; }	
+}
