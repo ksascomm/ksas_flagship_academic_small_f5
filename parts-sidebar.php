@@ -33,10 +33,10 @@
 				        //If there are one or more display a menu of siblings
 							elseif (count($ancestors) >= 1) {
 								$parent_page = get_post($post->post_parent);
-								$parent_url = $parent_page->guid;
+								$parent_url =  get_permalink($post->post_parent);
 								$parent_name = $parent_page->post_title;
 							?>
-							
+						<!--Below is displayed when on a child page -->	
 							<div class="offset-gutter radius-topright" id="sidebar_header">
 								<h5 class="white">Also in <a href="<?php echo $parent_url;?>" class="grey bold"><?php echo $parent_name ?></a></h5>
 							</div>
