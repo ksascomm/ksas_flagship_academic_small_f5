@@ -56,24 +56,15 @@ a.button {
 #main_nav ul.flyout li {float:none;}
 ul.flyout, .nav-bar li ul { padding: 0; list-style: none; }
 ul.flyout li, .nav-bar li ul li { border-left: solid 3px #000; }
-ul.flyout li a, .nav-bar li ul li a { background: rgb(0,0,0);background: rgba(0,0,0,.75); border: 1px solid #000; border-width: 1px 1px 0 0; color: #FFF; display: block; font-size: 14px; height: auto; line-height: 1; padding: 15px 20px; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+ul.flyout li a, .nav-bar li ul li a { background: rgb(0,0,0); background: rgba(0,0,0,.75); border: 1px solid #000; }
 ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #333; background: rgba(255,255,255,.1); color: #333; }
 ul.flyout li.active, .nav-bar li ul li.active { margin-top: 0; border-top: 1px solid #4d4d4d; border-left: 4px solid #1a1a1a; }
-ul.flyout li.active a, .nav-bar li ul li.active a { background: #4d4d4d; border: none; color: #fff; height: auto; margin: 0; position: static; top: 0; -webkit-box-shadow: 0 0 0; -moz-box-shadow: 0 0 0; box-shadow: 0 0 0; }
+ul.flyout li.active a, .nav-bar li ul li.active a { background: #4d4d4d; border: none; color: #fff; height: auto; margin: 0; position: static; top: 0; box-shadow: 0 0 0; }
 
 #main_nav ul li:hover ul,
 #main_nav ul li a:hover ul,
 #main_nav ul li.current_page_ancestor ul,
-#main_nav ul li.current_page_item ul {
-	visibility:visible;
-	background: rgb(0,0,0);
-	background: rgba(0,0,0,.75); 
-	width: 300px;
-	min-height:auto;
-	-webkit-border-radius:  0px;
-	-moz-border-radius: 	0px;
-	border-radius: 			0px;
-	z-index: 1;
+#main_nav ul li.current_page_item ul { visibility:visible; background: rgb(0,0,0); background: rgba(0,0,0,.75);  width: 300px; min-height:auto; border-radius: 	0px; z-index: 1;
 }
 
 #main_nav ul li:hover ul li a:hover,
@@ -82,13 +73,13 @@ ul.flyout li.active a, .nav-bar li ul li.active a { background: #4d4d4d; border:
 	color:#FFF;
 }
 
-
 #main_nav ul li ul li.current_page_item a,
 #main_nav ul li ul li.current_page_ancestor a,
 #main_nav ul li ul li.current_page_parent a,
 #main_nav ul li ul li a:hover {
 	color:#FFF;
 }
+
 #quicklinks li.has-flyout {
 	line-height: 38px;
 }
