@@ -124,8 +124,28 @@ border-width: 1px !important;
 border-style: solid !important;
 }
 
+.visible-img img {
+transform: inherit;
+-webkit-transform: inherit;
+-ms-transform: inherit;
+height: 94%;
+}
+
 li.nowrap {
     margin-left: 0px;
+}
+
+.th:hover, .th:focus {
+  box-shadow: 0 0 6px 1px rgba(0,94,184,1);
+}
+
+.tabs dd>a, .tabs .tab-title>a {	 	 
+font-size: 0.85rem;	 	 
+}
+
+
+.bulletin {
+	margin-left: 10px;
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
