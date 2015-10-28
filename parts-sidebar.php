@@ -2,7 +2,7 @@
 	<?php 
 		if ( is_page() && has_post_thumbnail()  ) {  
 			wp_reset_query();
-				the_post_thumbnail('full', array('class'	=> "offset-gutter radius-topright featured show-for-large-up")); 
+				the_post_thumbnail('full', array('class'	=> "offset-gutter radius-topright show-for-large-up featured show-for-large-up")); 
 			 } 
 		 ?>
 
@@ -17,7 +17,7 @@
 					        $ancestor_slug = $the_ancestor->post_name;
 
 				     //If there are no ancestors display a menu of children
-							if (count($ancestors) == 0 && is_front_page() == false || is_page('hammond-society') ) {
+							if (count($ancestors) == 0 && is_front_page() == false || is_page('hammond-society')  ) {
 								$page_name = $post->post_title;
 								$test_menu = wp_nav_menu( array( 
 									'theme_location' => 'main_nav', 
@@ -33,7 +33,7 @@
 				        //If there are one or more display a menu of siblings
 							elseif (count($ancestors) >= 1) {
 								$parent_page = get_post($post->post_parent);
-								$parent_url =  get_permalink($post->post_parent);
+								$parent_url  = get_permalink($post->post_parent);
 								$parent_name = $parent_page->post_title;
 							?>
 						<!--Below is displayed when on a child page -->	
@@ -54,6 +54,10 @@
 		<!-- End Navigation for Sibling Pages -->
 		<!-- Page Specific Sidebar -->
 		<?php if ( is_page() && get_post_meta($post->ID, 'ecpt_page_sidebar', true) ) {
+				wp_reset_query(); 
+				echo apply_filters('the_content', get_post_meta($post->ID, 'ecpt_page_sidebar', true));
+			} ?>
+		<?php if (is_page_template('template-bb-undergrad.php') ) {
 				wp_reset_query(); 
 				echo apply_filters('the_content', get_post_meta($post->ID, 'ecpt_page_sidebar', true));
 			} ?>
