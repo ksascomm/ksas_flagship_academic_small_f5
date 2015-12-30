@@ -148,6 +148,24 @@ font-size: 0.85rem;
 	margin-left: 10px;
 }
 
+#menu-footer-links a,
+.white {
+    color: #FFF!important
+}
+
+#copyright a {
+    color: #fff!important
+}
+
+.content > .accordion .accordion-navigation > a,
+.accordion dd > a {
+    font-size: 1.1rem;
+    font-family: 'gentona-book', Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 .nav-bar > li.has-flyout.is-touch > a:first-child { padding-right: 25px; }	
 }
