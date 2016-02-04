@@ -143,11 +143,6 @@ li.nowrap {
 font-size: 0.85rem;	 	 
 }
 
-
-.bulletin {
-	margin-left: 10px;
-}
-
 #menu-footer-links a,
 .white {
     color: #FFF!important
@@ -164,6 +159,7 @@ font-size: 0.85rem;
     font-weight: 400;
     font-style: normal;
 }
+
 
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
