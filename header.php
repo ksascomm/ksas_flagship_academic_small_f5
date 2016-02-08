@@ -11,7 +11,7 @@
 	<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-57x57-precomposed.png" />
   
 	<!-- CSS Files: All pages -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/stylesheets/app.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/stylesheets/app.min.css">
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 10]>
 	    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,80 +40,34 @@
 				</div>
 			</div>
 			<div class="row hide-for-print">
-					<div id="search-bar" class="small-12 columns">
-						
-							<div class="small-6 columns">
-							<?php $theme_option = flagship_sub_get_global_options();
-									$collection_name = $theme_option['flagship_sub_search_collection'];
-							?>
-
-							<form method="GET" action="<?php echo site_url('/search'); ?>">
-								<input type="submit" class="icon-search" value="&#xe004;" />
-								<input type="text" name="q" placeholder="Search this site" />
-								<input type="hidden" name="site" value="<?php echo $collection_name; ?>" />
-							</form>
-							</div>
-								<?php wp_nav_menu( array(
-									'theme_location' => 'search_bar',
-									'menu_class' => '',
-									'fallback_cb' => 'foundation_page_menu',
-									'container' => 'div',
-									'container_id' => 'search_links',
-									'container_class' => 'small-6 columns links inline',
-									'depth' => 1,
-									'items_wrap' => '%3$s', )); ?>
-						
-					</div>	<!-- End #search-bar	 -->
+				<?php get_template_part( 'parts', 'search-mobile' ); ?>
 			</div>
 		</div>
 		
-	   <div id="desktop-nav">
-		<div class="row hide-for-print">
-			<div id="search-bar" class="small-12 medium-5 medium-offset-7 columns">
-				<div class="row">
-					<div class="small-6 columns">
-					<?php $theme_option = flagship_sub_get_global_options(); 
-							$collection_name = $theme_option['flagship_sub_search_collection'];
-					?>
-
-					<form method="GET" action="<?php echo site_url('/search'); ?>">
-						<input type="submit" class="icon-search" value="&#xe004;" />
-						<input type="text" name="q" placeholder="Search this site" />
-						<input type="hidden" name="site" value="<?php echo $collection_name; ?>" />
-					</form>
+		<div id="desktop-nav">
+			<div class="row hide-for-print">
+				<?php get_template_part( 'parts', 'search-bar' ); ?>
+			</div>
+			<div class="row" id="department">
+				<div class="medium-12 columns" id="logo_nav">
+					<div class="medium-3 columns">
+						<li class="logo"><a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo.png" alt="jhu logo"></a></li>
 					</div>
-						<?php wp_nav_menu( array( 
-							'theme_location' => 'search_bar', 
-							'menu_class' => '', 
-							'fallback_cb' => 'foundation_page_menu', 
-							'container' => 'div',
-							'container_id' => 'search_links', 
-							'container_class' => 'small-6 columns links inline mobile-two',
-							'depth' => 1,
-							'items_wrap' => '%3$s', )); ?> 
-				</div>	
-			</div>	<!-- End #search-bar	 -->
-		</div>
-		<div class="row" id="department">
-			<div class="medium-12 columns" id="logo_nav">
-				<div class="medium-3 columns">
-					<li class="logo"><a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo.png" alt="jhu logo"></a></li>
+					<div class="medium-9 columns">
+						<h1><a class="white" href="<?php echo site_url(); ?>"><span class="small"><?php echo get_bloginfo ( 'description' ); ?></span><?php echo get_bloginfo( 'title' ); ?></a></h1>
+					</div>			
 				</div>
-				<div class="medium-9 columns">
-					<h1><a class="white" href="<?php echo site_url(); ?>"><span class="small"><?php echo get_bloginfo ( 'description' ); ?></span><?php echo get_bloginfo( 'title' ); ?></a></h1>
-				</div>			
+			</div>
+			<div class="row hide-for-print">
+				<?php wp_nav_menu( array( 
+					'theme_location' => 'main_nav', 
+					'menu_class' => 'nav-bar', 
+					'container' => 'nav',
+					'container_id' => 'main_nav', 
+					'container_class' => 'small-12 columns',
+					'fallback_cb' => 'foundation_page_menu',
+					'walker' => new foundation_navigation(),
+					'depth' => 2  )); ?> 
 			</div>
 		</div>
-		<div class="row hide-for-print">
-			<?php wp_nav_menu( array( 
-				'theme_location' => 'main_nav', 
-				'menu_class' => 'nav-bar', 
-				'container' => 'nav',
-				'container_id' => 'main_nav', 
-				'container_class' => 'small-12 columns',
-				'fallback_cb' => 'foundation_page_menu',
-				'walker' => new foundation_navigation(),
-				'depth' => 2  )); ?> 
-		</div>
-		</div>
-		</header>
+	</header>
