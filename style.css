@@ -38,7 +38,7 @@ a.button {
 .nav-bar > li:hover { background: #255682; }
 .nav-bar > li > a { color: #FFF; }
 .nav-bar > li ul { margin-bottom: 0; }
-.nav-bar > li .flyout { display: none; }
+.nav-bar > li.flyout { display: none; }
 .nav-bar > li.has-flyout > a:first-child { padding-right: 25px; position: relative; }
 .nav-bar > li.has-flyout > a:first-child:after { content: ""; display: block; width: 0; height: 0; border: none; }
 .nav-bar > li.has-flyout > a.flyout-toggle { border-left: 0 !important; position: absolute; right: 0; top: 0; padding: 20px; z-index: 2; display: block; }
@@ -47,15 +47,15 @@ a.button {
 .nav-bar > li > a:first-child { position: relative; padding: 0 20px; display: block; text-decoration: none; font-size: 14px; }
 .nav-bar > li > input { margin: 0 10px; }
 
-#main_nav ul .flyout { background: rgb(0,0,0); background: rgba(0,0,0,.75); padding: 0px; margin: 0; border: 1px solid #000; position: absolute; top: 60px; left: 0px; width: 300px; z-index: 40 !important; -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); height: auto; /* remove margin on any first-child element */ /* remove margin on last element */ }
-#main_nav ul .flyout p { line-height: 1.2; font-size: 13px; }
-#main_nav ul .flyout *:first-child { margin-top: 0; }
-#main_nav ul .flyout *:last-child { margin-bottom: 0; }
-#main_nav ul .flyout.small { width: 166.66667px; }
-#main_nav ul .flyout.large { width: 437.5px; }
-#main_nav ul .flyout.right { left: auto; right: -2px; }
-#main_nav ul .flyout.left { right: auto; left: -2px; }
-#main_nav ul .flyout.up { bottom: auto; }
+#main_nav ul.flyout { background: rgb(0,0,0); background: rgba(0,0,0,.75); padding: 0px; margin: 0; border: 1px solid #000; position: absolute; top: 60px; left: 0px; width: 300px; z-index: 40 !important; -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); height: auto; /* remove margin on any first-child element */ /* remove margin on last element */ }
+#main_nav ul.flyout p { line-height: 1.2; font-size: 13px; }
+#main_nav ul.flyout *:first-child { margin-top: 0; }
+#main_nav ul.flyout *:last-child { margin-bottom: 0; }
+#main_nav ul.flyout.small { width: 166.66667px; }
+#main_nav ul.flyout.large { width: 437.5px; }
+#main_nav ul.flyout.right { left: auto; right: -2px; }
+#main_nav ul.flyout.left { right: auto; left: -2px; }
+#main_nav ul.flyout.up { bottom: auto; }
 #main_nav ul.flyout li {float:none;}
 ul.flyout, .nav-bar li ul { padding: 0; list-style: none; }
 ul.flyout li, .nav-bar li ul li { border-left: solid 3px #000; }
