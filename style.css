@@ -165,7 +165,9 @@ font-size: 0.85rem;
     font-style: normal;
 }
 
-
+.tabs-content .content li {
+    margin-bottom: 16px;
+}
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 .nav-bar > li.has-flyout.is-touch > a:first-child { padding-right: 25px; }	
