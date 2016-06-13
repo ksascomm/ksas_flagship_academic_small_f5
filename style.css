@@ -173,6 +173,10 @@ font-size: 0.85rem;
 .nav-bar > li.has-flyout.is-touch > a:first-child { padding-right: 25px; }	
 }
 
+main {
+    display: block
+}
+
 /*IE9 Queries
 
 @media (max-width: 768px) {
