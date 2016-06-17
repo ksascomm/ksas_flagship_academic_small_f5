@@ -128,10 +128,7 @@ border-style: solid !important;
 }
 
 .visible-img img {
-transform: inherit;
--webkit-transform: inherit;
--ms-transform: inherit;
-height: 94%;
+height: 90%;
 }
 
 li.nowrap {
@@ -176,17 +173,3 @@ font-size: 0.85rem;
 main {
     display: block
 }
-
-/*IE9 Queries
-
-@media (max-width: 768px) {
-    #desktop-nav {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-    #mobile-nav {
-    display: none !important;
-  }
-}*/
