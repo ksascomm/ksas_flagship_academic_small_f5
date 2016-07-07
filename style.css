@@ -177,3 +177,13 @@ body.purple footer a {
 main {
     display: block
 }
+
+.orbit-container .orbit-prev, .orbit-container .orbit-next {
+background-color: rgba(0, 0, 0, .5);
+position: absolute;
+top: 25px;
+}
+
+div.orbit-wrapper div.slider-nav span {
+margin-top: inherit;
+}
