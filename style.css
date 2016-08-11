@@ -170,10 +170,6 @@ body.purple footer a {
     margin-bottom: 16px;
 }
 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-.nav-bar > li.has-flyout.is-touch > a:first-child { padding-right: 25px; }	
-}
-
 main {
     display: block
 }
@@ -186,4 +182,22 @@ top: 25px;
 
 div.orbit-wrapper div.slider-nav span {
 margin-top: inherit;
+}
+
+.ksas_profile h5, p {
+    line-height: 1.4;
+}
+
+.ksas_profile h5 {
+    padding-left: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+.metaslider .caption {
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+.nav-bar > li.has-flyout.is-touch > a:first-child { padding-right: 25px; }	
 }
