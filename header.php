@@ -33,19 +33,21 @@
 
   <?php include_once("analytics.php"); ?>
 </head>
+<?php $blog_id = get_current_blog_id(); ?>
 <?php $theme_option = flagship_sub_get_global_options(); $color_scheme = $theme_option['flagship_sub_color_scheme']; global $blog_id; $site_id = 'site-' . $blog_id; ?>
 <body <?php body_class($color_scheme . ' ' . $site_id); ?> onLoad="viewport()">	
 	<header>
 	   <div id="mobile-nav">
 			<div class="row">
 				<div class="small-12 large-4 columns centered">
-					<div class="mobile-logo centered"><a href="<?php echo network_site_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo-horizontal.png" alt="jhu logo"></a>
+					<?php if ($blog_id == 79)  : ?>
+						<div class="mobile-logo centered"><a href="http://jhu.edu"><img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-horizontal.png" alt="jhu logo"></a>
+					<?php else : ?> 
+						<div class="mobile-logo centered"><a href="<?php echo network_site_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo-horizontal.png" alt="krieger logo"></a>
+					<?php endif; ?>	
 						<h1><a class="white" href="<?php echo site_url(); ?>"><?php echo get_bloginfo( 'title' ); ?></a></h1>
 					</div>
 				</div>
-			</div>
-			<div class="row hide-for-print">
-				<?php get_template_part( '/parts/search-mobile' ); ?>
 			</div>
 		</div>
 		
@@ -55,7 +57,11 @@
 			<div class="row" id="department">
 				<div class="medium-12 columns" id="logo_nav">
 					<div class="medium-3 columns">
-						<li class="logo"><a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo.png" alt="jhu logo"></a></li>
+						<?php if ($blog_id == 79)  : ?>
+							<li class="logo"><a href="http://jhu.edu" title="Johns Hopkins University"><img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu.png" alt="jhu logo"></a></li>
+						<?php else : ?> 	
+							<li class="logo"><a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo.png" alt="krieger logo"></a></li>	
+						<?php endif; ?>
 					</div>
 					<div class="medium-9 columns">
 						<h1><a class="white" href="<?php echo site_url(); ?>"><span class="small"><?php echo get_bloginfo ( 'description' ); ?></span><?php echo get_bloginfo( 'title' ); ?></a></h1>
