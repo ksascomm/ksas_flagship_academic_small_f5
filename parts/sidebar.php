@@ -1,10 +1,16 @@
 	<aside class="small-12 large-4 columns hide-for-print" id="sidebar"> 
-	<?php 
+		<!-- Start Featured Image -->
+
+		<?php 
 		if ( is_page() && has_post_thumbnail()  ) {  
 			wp_reset_query();
-				the_post_thumbnail('full', array('class'	=> "offset-gutter radius-topright show-for-large-up featured")); 
+				the_post_thumbnail('full', array('class'	=> "offset-gutter radius-topright featured show-for-large-up")); 
 			 } 
 		 ?>
+
+		<!-- END Featured Image --> 
+
+		<!-- Start Navigation for Sibling Pages -->	
 
 			<?php 
 			
@@ -26,7 +32,7 @@
 									'items_wrap' =>  '<div class="radius-topright" id="sidebar_header"><h5 class="white">Also in <span class="grey bold">' . $page_name . '</span></h5></div><ul class="%2$s" role="navigation" aria-label="Sidebar Menu">%3$s</ul>',				
 									'submenu' => $page_name,
 									'depth' => 1,
-									'echo' => false
+									
 								));
 							if (strpos($test_menu,'<li id') !== false) : echo $test_menu; endif;
 						}
