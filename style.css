@@ -184,15 +184,6 @@ div.orbit-wrapper div.slider-nav span {
 margin-top: inherit;
 }
 
-.ksas_profile h5, p {
-    line-height: 1.4;
-}
-
-.ksas_profile h5 {
-    padding-left: 0px !important;
-    margin-bottom: 10px !important;
-}
-
 .metaslider .caption {
     font-size: 16px;
     line-height: 1.2;
@@ -207,13 +198,7 @@ font-size: 16px;
 }
 
 .mobile-field {margin-bottom: 30px;}
-div.field {
-    min-height: 355px;
-    margin-bottom: 30px;
-    max-width: 305px;
-    min-width: 240px;
-    border: .1875em solid black;
-}
+
 div.field img {
     height: 100%;
 }
