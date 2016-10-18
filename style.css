@@ -218,6 +218,16 @@ overflow: hidden;
     margin-right: auto; 
 }
 
+ul.syllabi li {
+    font-size: 1rem;
+    padding-bottom: .75rem;
+}
+
+ul.syllabi li a:hover {
+    color: #2C2C33;
+    border-bottom-style: solid !important;
+}
+
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 .nav-bar > li.has-flyout.is-touch > a:first-child { padding-right: 25px; }	
 }
