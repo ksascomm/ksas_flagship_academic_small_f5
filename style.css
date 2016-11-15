@@ -228,6 +228,20 @@ ul.syllabi li a:hover {
     border-bottom-style: solid !important;
 }
 
+.testimonial img.circle {
+  border-radius: 50%;
+}
+.testimonial dd.accordion-navigation {
+  margin-top: 25px;
+}
+
+.testimonial .accordion-navigation > a:after {
+  display:none;
+}
+.testimonial .accordion-navigation.active a:after {
+  display: none;
+}
+
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 .nav-bar > li.has-flyout.is-touch > a:first-child { padding-right: 25px; }	
 }
