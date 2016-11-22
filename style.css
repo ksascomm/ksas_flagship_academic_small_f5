@@ -228,7 +228,7 @@ ul.syllabi li a:hover {
     border-bottom-style: solid !important;
 }
 
-.testimonial img.circle {
+.testimonial img.circle, .ksas_testimonial img.circle {
   border-radius: 50%;
 }
 .testimonial dd.accordion-navigation {
