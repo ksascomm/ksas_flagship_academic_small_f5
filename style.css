@@ -242,6 +242,32 @@ ul.syllabi li a:hover {
   display: none;
 }
 
+.wpvl_auto_thumb_play:before {
+    content: "\f04b";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: inherit;
+    text-decoration: inherit;
+    font-size: 2.5rem;
+    position: absolute;
+    left: 2.5rem;
+    top: 1rem;
+}
+
+.wpvl_auto_thumb_play img {
+    display: none;
+}
+
+img.video_lightbox_auto_anchor_image {
+    width: 250px;
+    height: 188px;
+}
+
+.wpvl_auto_thumb_box {
+    width: 250px !important; 
+    height: 188px !important; 
+}
+
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 .nav-bar > li.has-flyout.is-touch > a:first-child { padding-right: 25px; }	
 }
