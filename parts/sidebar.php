@@ -1,4 +1,4 @@
-	<aside class="small-12 large-4 columns hide-for-print" id="sidebar"> 
+	<aside class="small-12 large-4 columns hide-for-print" id="sidebar" id="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">  
 		<!-- Start Featured Image -->
 
 		<?php 
@@ -13,6 +13,7 @@
 		<!-- Start Navigation for Sibling Pages -->	
 
 			<?php 
+				wp_reset_query();
 				if( is_page() ) { 
 					global $post;
 				        $ancestors = get_post_ancestors( $post->ID ); // Get the array of ancestors
