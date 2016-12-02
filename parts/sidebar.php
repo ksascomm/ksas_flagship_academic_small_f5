@@ -13,7 +13,7 @@
 		<!-- Start Navigation for Sibling Pages -->	
 
 			<?php 
-				wp_reset_query();
+				
 				if( is_page() ) { 
 					global $post;
 				        $ancestors = get_post_ancestors( $post->ID ); // Get the array of ancestors
