@@ -75,7 +75,7 @@
 					</div>			
 				</div>
 			</div>
-			<nav class="row hide-for-print" aria-label="Main Menu" id="main_nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+			<nav class="row hide-for-print" aria-label="Main Menu" id="main_nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 				<?php wp_nav_menu( array( 
 					'theme_location' => 'main_nav', 
 					'menu_class' => 'nav-bar', 
