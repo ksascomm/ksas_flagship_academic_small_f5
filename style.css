@@ -309,9 +309,9 @@ li.external a::after {
     border-style: solid !important;
 }
 
-.visible-img img {
+/*.visible-img img {
     height: 90%;
-}
+}*/
 
 li.nowrap {
     margin-left: 0px;
@@ -461,6 +461,10 @@ img.video_lightbox_auto_anchor_image {
 
 body.black a.field {
     color: #4A484C;
+}
+
+.frm_hidden {
+    display: none !important;
 }
 
 @media only screen and (min-width:40.063em) and (max-width:64em) {
