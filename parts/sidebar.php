@@ -2,7 +2,7 @@
 		<!-- Start Featured Image -->
 
 		<?php 
-		if ( is_page() && has_post_thumbnail()  ) {  
+		if ( is_page() && has_post_thumbnail()  ) {
 			wp_reset_query();
 				the_post_thumbnail('full', array('class'	=> "offset-gutter radius-topright featured show-for-large-up")); 
 			 } 
@@ -23,7 +23,7 @@
 					        $ancestor_slug = $the_ancestor->post_name;
 
 				     //If there are no ancestors display a menu of children
-							if (count($ancestors) == 0 && is_front_page() == false || is_page('hammond-society')  ) {
+							if (count($ancestors) == 0 && is_front_page() == false ) {
 								$page_name = $post->post_title;
 								$test_menu = wp_nav_menu( array( 
 									'theme_location' => 'main_nav', 
@@ -44,7 +44,7 @@
 							?>
 						<!--Below is displayed when on a child page -->	
 							<div class="offset-gutter radius-topright" id="sidebar_header">
-								<h5 class="white">Also in <a href="<?php echo $parent_url;?>" class="grey bold"><?php echo $parent_name ?></a></h5>
+								<h5 class="white">Also in <span class="grey bold"><?php echo $parent_name ?></span></h5>
 							</div>
 							<?php
 								wp_nav_menu( array( 
