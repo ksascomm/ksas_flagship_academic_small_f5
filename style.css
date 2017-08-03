@@ -471,5 +471,20 @@ body.black a.field {
     .nav-bar > li.has-flyout.is-touch > a:first-child {
         padding-right: 25px;
     }
+}
 
+.home .sidebar_bg #sidebar .widget:not(:first-child) .widget_title {
+    margin-top: 1rem;
+}
+
+form.archive input[type="text"] {
+    background-color: white !important;
+    width: 75% !important;
+}
+
+.post-archive .panel {
+    margin-bottom: 1rem;
+}
+.post-archive .wp-post-image {
+    margin-bottom: 15px;
 }
