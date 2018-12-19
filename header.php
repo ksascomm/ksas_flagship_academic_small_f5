@@ -42,19 +42,18 @@
 		<img src="<?php echo get_template_directory_uri() ?>/assets/images/krieger.small.horizontal.blue.jpg" alt="krieger logo">
 		<h1><?php echo get_bloginfo ( 'description' ); ?> <?php echo get_bloginfo( 'title' ); ?></h1>
 	</div>
-	   <div id="mobile-nav" class="hide-on-print">
-			<div class="row">
-				<div class="small-12 large-4 columns centered">
-					<?php if ($blog_id == 79)  : ?>
-						<div class="mobile-logo centered"><a href="http://jhu.edu"><img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-horizontal.png" alt="jhu logo"></a>
-					<?php else : ?> 
-						<div class="mobile-logo centered"><a href="<?php echo network_site_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo-horizontal.png" alt="krieger logo"></a>
-					<?php endif; ?>	
-						<h1 itemprop="headline"><a class="white" href="<?php echo site_url(); ?>"><?php echo get_bloginfo( 'title' ); ?></a></h1>
-					</div>
+	<div id="mobile-nav" class="hide-on-print">
+		<div class="row">
+			<div class="small-12 large-4 columns centered">
+				<div class="mobile-logo centered"><a href="<?php echo network_site_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo-horizontal.png" alt="krieger logo"></a>
+					<h1 itemprop="headline"><a class="white" href="<?php echo site_url(); ?>"><?php echo get_bloginfo( 'title' ); ?></a></h1>
 				</div>
 			</div>
 		</div>
+		<div class="row hide-for-print">
+			<?php get_template_part( '/parts/search-mobile' ); ?>
+		</div>	
+	</div>
 		
 		<div id="desktop-nav" class="hide-on-print">
 
